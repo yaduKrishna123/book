@@ -1,0 +1,27 @@
+{% extends 'home.html' %}
+{% block body %}
+<h3><a href="{% url 'bookapp:demo' %}"></a></h3>
+<div class="container">
+     <form method="post" enctype="multipart/form-data">
+         {% csrf_token %}
+  <div class="form-group">
+    <label for="formGroupExampleInput" style="font-size:20px;font-weight:bold;">Book Name</label>
+    <input type="text" class="form-control" name="name" placeholder="Example input">
+  </div>
+  <div class="form-group">
+    <label for="formGroupExampleInput2" style="font-size:20px;font-weight:bold;">Book descreption</label>
+    <input type="text" class="form-control" name="dec" placeholder="Book descreption" style="height:100px;">
+  </div>
+          <div class="form-group">
+    <label style="font-size:20px;font-weight:bold;">Book Publish year</label>
+    <input type="number" class="form-control" name="year" placeholde="Book publish year" style="width:100px;">
+  </div>
+         <input type="file" name="img">
+         <input type="submit" style="position:relative;top:45px;font-size:27px;background-color:#00FFFF;color:black;">
+</form>
+
+    </div>
+</div>
+
+{% endblock %}
+

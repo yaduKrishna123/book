@@ -1,0 +1,9 @@
+{% extends 'home.html' %}
+{% block body %}
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <h4 style="text-align:center;position:relative;top:140px;">Are you sure want to Delete Thhis Movie?</h4>
+  <input type="submit" style="position:relative; left:900px;top:170px;font-size:30px;background-color:red;color:white">
+
+</form>
+{% endblock %}
